@@ -20,9 +20,11 @@
             ChildForm.Name = "Child" + (formindex + 1).ToString(); //формын нэр зааж байна
             ChildForm.Text = "Child" + (formindex + 1).ToString(); //формын гарчиг зааж байна.
             ChildForm.MdiParent = this; //Эцэг цонхыг зааж байна.
-            TextBox txtBox = new TextBox(); //текст бичих талбар үүсгэж байна
+            TextBox txtBox = new TextBox(); //текст бичих талбар үүсгэж байна   
             txtBox.Dock = DockStyle.Fill; //форм дээр дүүргэж байна.
             txtBox.Multiline = true; // олон мөр текст бичих боломжтой болно.
+            txtBox.AcceptsReturn = true; // Enter дарахад шинэ мөр болгоно.
+            txtBox.ScrollBars = ScrollBars.Both; // хэвтээ ба босоо гүйлгэх самбар нэмнэ.
             ChildForm.Controls.Add(txtBox); // хүү формын контролуудын массивт нэмж байна.
             ChildForm.Show(); // хүү формыг харагдуулж байна.
         }
