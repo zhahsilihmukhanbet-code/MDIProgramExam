@@ -10,7 +10,7 @@
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            this.Text = "MDI Текст Боловсруулагч";
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
@@ -25,6 +25,7 @@
             txtBox.Multiline = true; // олон мөр текст бичих боломжтой болно.
             txtBox.AcceptsReturn = true; // Enter дарахад шинэ мөр болгоно.
             txtBox.ScrollBars = ScrollBars.Both; // хэвтээ ба босоо гүйлгэх самбар нэмнэ.
+            txtBox.Font = new Font("Segoe UI", 11); // текстийн хэмжээ болон фонт тохируулна.
             ChildForm.Controls.Add(txtBox); // хүү формын контролуудын массивт нэмж байна.
             ChildForm.Show(); // хүү формыг харагдуулж байна.
         }
