@@ -20,6 +20,7 @@
             ChildForm.Name = "Child" + (formindex + 1).ToString(); //формын нэр зааж байна
             ChildForm.Text = "Child" + (formindex + 1).ToString(); //формын гарчиг зааж байна.
             ChildForm.MdiParent = this; //Эцэг цонхыг зааж байна.
+            ChildForm.Size = new Size(450, 300); // хүү формын анхны хэмжээг зааж байна.
             TextBox txtBox = new TextBox(); //текст бичих талбар үүсгэж байна   
             txtBox.Dock = DockStyle.Fill; //форм дээр дүүргэж байна.
             txtBox.Multiline = true; // олон мөр текст бичих боломжтой болно.
@@ -28,6 +29,7 @@
             txtBox.Font = new Font("Segoe UI", 11); // текстийн хэмжээ болон фонт тохируулна.
             ChildForm.Controls.Add(txtBox); // хүү формын контролуудын массивт нэмж байна.
             ChildForm.Show(); // хүү формыг харагдуулж байна.
+            txtBox.Focus(); // шинэ цонх нээгдэхэд шууд текст бичихэд бэлэн болгоно.
         }
 
         private void arrangeIconsToolStripMenuItem_Click(object sender, EventArgs e)
